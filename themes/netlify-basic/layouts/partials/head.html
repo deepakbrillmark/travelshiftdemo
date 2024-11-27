@@ -5,4 +5,13 @@
   {{ $title := print .Site.Title " | " .Title }}
   {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
   <title>{{ $title }}</title>
+
+  <script src="//d2wy8f7a9ursnm.cloudfront.net/v7/bugsnag.min.js"></script>
+  <script type="module">
+    import BugsnagPerformance from '//d2wy8f7a9ursnm.cloudfront.net/v1/bugsnag-performance.min.js'
+    Bugsnag.start({ apiKey: '7d87f5bf4e729ce012a7b05572114bec' })
+    BugsnagPerformance.start({ apiKey: '7d87f5bf4e729ce012a7b05572114bec' })
+  </script>
+
+  
 </head>
