@@ -34,6 +34,8 @@
           timestamp: new Date().toISOString(),
           sessionID: Math.random().toString(36).substr(2, 9) // Example session ID
         });
+
+        event.setContext(details.errorMessage); // Custom context/title
       });
 
       alert(`Notification triggered for: ${campaign}`);
