@@ -3,20 +3,20 @@
     // Function to send a notification to Bugsnag
     function triggerBugsnagNotification(campaign) {
       const campaignDetails = {
-        travelshift: {
-          errorMessage: 'Travelshift campaign error',
+        one: {
+          errorMessage: 'Travelshift campaign 1 error',
           url: 'https://clientsite.com/travelshift',
           testID: 'travelshift-001',
         },
-        convert: {
-          errorMessage: 'Convert campaign error',
+        two: {
+          errorMessage: 'Travelshift campaign 2 error,
           url: 'https://clientsite.com/convert',
-          testID: 'convert-002',
+          testID: 'travelshift-002',
         },
-        bugsnag: {
-          errorMessage: 'Bugsnag campaign error',
+        three: {
+          errorMessage: 'Travelshift campaign 3 error',
           url: 'https://clientsite.com/bugsnag',
-          testID: 'bugsnag-003',
+          testID: 'travelshift-002',
         },
       };
 
@@ -42,7 +42,6 @@
 <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
       margin: 0;
       display: flex;
       align-items: center;
@@ -84,9 +83,9 @@
     <h1>Bugsnag Notification Demo</h1>
     <p>Click a button below to trigger a notification to Bugsnag for the respective campaign.</p>
     <div class="button-group">
-      <button onclick="triggerBugsnagNotification('travelshift')">Trigger Travelshift Notification</button>
-      <button onclick="triggerBugsnagNotification('convert')">Trigger Convert Notification</button>
-      <button onclick="triggerBugsnagNotification('bugsnag')">Trigger Bugsnag Notification</button>
+      <button onclick="triggerBugsnagNotification('one')">Trigger Campaign 1 error </button>
+      <button onclick="triggerBugsnagNotification('two')">Trigger Campaign 2 error</button>
+      <button onclick="triggerBugsnagNotification('three')">Trigger Campaign 3 error</button>
     </div>
   </div>
 </div>
