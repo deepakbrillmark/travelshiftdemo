@@ -27,12 +27,6 @@
 
       const details = campaignDetails[campaign];
 
-      Bugsnag.start({
-        onError: function (event) {
-          event.context =  details.errorMessage;
-        }
-      })
-      
       Bugsnag.notify(new Error(details.errorMessage), event => {
         event.addMetadata('testDetails', {
           errorMessage: details.errorMessage,
